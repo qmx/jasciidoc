@@ -1,0 +1,24 @@
+options{
+    static = false;
+    java_unicode_escape=true;
+}
+
+PARSER_BEGIN(AsciiDocParser)
+package me.qmx.jasciidoc.parser;
+
+import me.qmx.jasciidoc.parser.ast.Document;
+
+public class AsciiDocParser {
+
+}
+PARSER_END(AsciiDocParser)
+
+SKIP: {
+    <WHITESPACE: [" ", "\n", "\t", "\r"]>
+}
+
+Document document():
+{}
+{
+    {return new Document();}
+}
