@@ -13,9 +13,7 @@ public class AsciiDocParser {
 }
 PARSER_END(AsciiDocParser)
 
-SKIP: {
-    <WHITESPACE: [" ", "\n", "\t", "\r"]>
-}
+TOKEN: { <OTHER: ~[]> }
 
 Document document():
 {}
